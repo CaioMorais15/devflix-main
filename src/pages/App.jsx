@@ -10,7 +10,7 @@ import Menu from "../components/menu/menu";
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [movies, setMovies] = useState([]);
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
 
   const toggleMenu = () => {
     setMenu(!menu);

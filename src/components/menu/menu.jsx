@@ -10,7 +10,7 @@ const Menu = ({ toggleMenu }) => {
     <div className={styles.clicaFora} onClick={toggleMenu}>
       <div className={styles.menu}>
         <ul>
-          <li onClick={() => "htpps"}>
+          <li>
             <a href="">Terror</a>
           </li>
           <li>

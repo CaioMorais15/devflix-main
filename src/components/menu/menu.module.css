@@ -8,7 +8,7 @@
   z-index: 999;
 }
 .menu {
-  position: absolute;
+  position: relative;
   top: 15em;
   left: 12em;
   background: #6c0505;
