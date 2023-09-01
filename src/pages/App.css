@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-:root{
-  --font-raleway:"Raleway", sans-serif;
+:root {
+  --font-raleway: "Raleway", sans-serif;
 }
 
 * {
@@ -28,19 +28,19 @@ body {
 }
 
 .logo img {
-  width: 70%;
+  width: 90%;
   height: auto;
   display: block;
   margin: auto;
 }
 .search {
-  width: 70;
-  margin: 4rem 0 2rem;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem 1.75rem;
   border-radius: 4rem;
+  padding: 1.5rem 1.5rem;
   background: #1f2123;
   box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
   -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
@@ -50,13 +50,26 @@ body {
   border: none;
   padding-right: 1rem;
   outline: none;
-  color: #a1a1a1;
+  color: white;
   background: #1f2123;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
+  /* width: 1028px; */
+}
+.searchMenu {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0 2rem;
+  gap: 1em;
+}
+.searchMenu ion-icon {
+  background: none;
+  font-size: 64px;
+  color: white;
+  cursor: pointer;
 }
 .search img {
-  width: 35px;
+  width: 65px;
   height: 35px;
   cursor: pointer;
 }
@@ -67,7 +80,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  color: #f9d3b4;
+  color: #ff0000;
 }
 .container {
   width: 100%;
@@ -76,15 +89,22 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  border-radius: 80rem;
 }
 
 @media screen and (max-width: 600px) {
   .app {
     padding: 4rem;
   }
+
+  .searchMenu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
   .search {
     padding: 1rem 1.75rem;
-    width: 100%;
+    width: 70%;
   }
   .search input {
     font-size: 1rem;

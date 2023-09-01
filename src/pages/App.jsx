@@ -2,21 +2,26 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import MovieCard from "../components/movieCard/movieCard";
 
-import logo from "../assets/devflix.png";
+import logo from "../assets/DEVFLIX (17).png";
 import searchIcon from "../assets/search.svg";
 import Footer from "../components/footer/footer";
+import Menu from "../components/menu/menu";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [movies, setMovies] = useState([]);
+  const [menu, setMenu] = useState(true);
+
+  const toggleMenu = () => {
+    setMenu(!menu);
+  };
 
   const apiKey = "954cb850";
   const apiUrl = `https://omdbapi.com/?apikey=${apiKey}`;
 
   useEffect(() => {
-    searchMovies("Batman");
+    searchMovies("Barbie");
   }, []);
-
   const searchMovies = async (title) => {
     const response = await fetch(`${apiUrl}&s=${title}`);
     const data = await response.json();
@@ -32,18 +37,21 @@ const App = () => {
       <div className="logo">
         <img src={logo} alt="logo devflix" />
       </div>
-      <div className="search">
-        <input
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          onKeyDown={handlekeyPress}
-          placeholder="Pesquise por filmes"
-        />
-        <img
-          src={searchIcon}
-          alt="icone de pesquisa"
-          onClick={() => searchMovies(searchTerm)}
-        />
+      <div className="searchMenu">
+        <ion-icon name="menu-outline" onClick={toggleMenu}></ion-icon>
+        {menu && <Menu toggleMenu={toggleMenu} />}
+        <div className="search">
+          <input
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            onKeyDown={handlekeyPress}
+          />
+          <img
+            src={searchIcon}
+            alt="icone de pesquisa"
+            onClick={() => searchMovies(searchTerm)}
+          />
+        </div>
       </div>
       {movies?.length > 0 ? (
         <div className="container">
