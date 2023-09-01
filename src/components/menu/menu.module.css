@@ -14,6 +14,7 @@
   background: #6c0505;
   width: 20em;
   z-index: 1000;
+  border-radius: 2rem;
 }
 
 .menu ul {

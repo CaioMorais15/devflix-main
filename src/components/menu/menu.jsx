@@ -1,13 +1,17 @@
 import styles from "./menu.module.css";
 
+//const apiKey = "954cb850";
+  //const apiUrl = `https://omdbapi.com/?apikey=${apiKey}`; 
+
 const Menu = ({ toggleMenu }) => {
 
+  
   return (
     <div className={styles.clicaFora} onClick={toggleMenu}>
       <div className={styles.menu}>
         <ul>
-          <li>
-            <a href="">Terrror</a>
+          <li onClick={() => "htpps"}>
+            <a href="">Terror</a>
           </li>
           <li>
             <a href="">Romance</a>
